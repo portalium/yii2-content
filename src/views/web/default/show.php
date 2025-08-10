@@ -9,6 +9,8 @@ use portalium\theme\widgets\Panel;
 /* @var $model portalium\content\models\Content */
 
 $this->title = $model->title;
+$this->params['breadcrumbs'][] = ['label' => Module::t('Contents'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['show', 'id' => $model->id_content]];
 ?>
 
     <?php
